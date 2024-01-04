@@ -10,5 +10,11 @@ html(lang="en")
         header
             h1 Zoom Clone
         main
-            h2 Welcome to Zoom Clone
+            div#myStream
+                video#myFace(autoplay,playsinline, muted, width="400", height="400")
+                button#mute Mute
+                button#camera Turn Camera Off
+                select#cameras
+                    option(value ="device") Face Camera
+        script(src="/socket.io/socket.io.js") 
         script(src="/public/js/app.js") 
